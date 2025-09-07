@@ -14,14 +14,14 @@ export default defineConfig({
   plugins: [
     structureTool(),
     visionTool(),
-    documentInternationalization({
-      supportedLanguages: [
-        {id: 'en', title: 'English'},
-        {id: 'np', title: 'Nepali'},
-        {id: 'it', title: 'Italian'},
-      ],
-      schemaTypes: ['product'],
-    }),
+    // documentInternationalization({
+    //   supportedLanguages: [
+    //     {id: 'en', title: 'English'},
+    //     {id: 'np', title: 'Nepali'},
+    //     {id: 'it', title: 'Italian'},
+    //   ],
+    //   schemaTypes: ['products'],
+    // }),
   ],
 
   schema: {

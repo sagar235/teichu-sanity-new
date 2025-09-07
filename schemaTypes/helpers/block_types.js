@@ -9,5 +9,6 @@ export default [
   'all_product_filter',
   'product_filter',
   'product_faqs',
-  'faqs'
+  'faqs',
+  'warranty_details'
 ]

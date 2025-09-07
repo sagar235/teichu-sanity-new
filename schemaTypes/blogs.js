@@ -2,8 +2,8 @@ import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'blog',
-  title: 'Blog',
+  name: 'blogs',
+  title: 'Blogs',
   type: 'document',
   fields: [
     defineField({

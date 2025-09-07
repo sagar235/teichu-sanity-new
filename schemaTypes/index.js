@@ -1,4 +1,4 @@
-import product from './product'
+import products from './products'
 import page from './page'
 import blogs from './blogs'
 
@@ -17,11 +17,14 @@ import product_filter from './blocks/product_filter'
 import product_faqs from './blocks/product_faqs'
 import faqs_item from './blocks/faqs_item'
 import faqs from './blocks/faqs'
+import image_item from './blocks/image_item'
+import title_description_item from './blocks/title_description_item'
+import warranty_details from './blocks/warranty_details'
 
 export const schemaTypes = [
   //pages
   page,
-  product,
+  products,
   blogs,
 
   //blocks
@@ -39,5 +42,8 @@ export const schemaTypes = [
   product_filter,
   product_faqs,
   faqs_item,
-  faqs
+  faqs,
+  image_item,
+  title_description_item,
+  warranty_details
 ]

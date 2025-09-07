@@ -1,9 +1,9 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'product',
-  title: 'Product',
-  type: 'document',
+  name: 'title_description_item',
+  title: 'Title Description Item',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -20,21 +20,15 @@ export default defineType({
       title: 'Description',
       type: 'object',
       fields: [
-        {name: 'en', title: 'English', type: 'text'},
-        {name: 'np', title: 'Nepali', type: 'text'},
-        {name: 'it', title: 'Italian', type: 'text'},
+        {name: 'en', title: 'English', type: 'array', of: [{type: 'block'}]},
+        {name: 'np', title: 'Nepali', type: 'array', of: [{type: 'block'}]},
+        {name: 'it', title: 'Italian', type: 'array', of: [{type: 'block'}]},
       ],
     }),
-    defineField({
-      name: 'image',
-      title: 'Product Image',
-      type: 'image',
-    }),
   ],
-
   preview: {
     select: {
-      title: 'title.en', // 👈 only show English in list
+      title: 'title.en',
       media: 'image',
     },
   },
