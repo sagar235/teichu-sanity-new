@@ -10,5 +10,7 @@ export default [
   'product_filter',
   'product_faqs',
   'faqs',
-  'warranty_details'
+  'warranty_details',
+  'html_content',
+  'contact_us'
 ]

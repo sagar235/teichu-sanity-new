@@ -20,6 +20,8 @@ import faqs from './blocks/faqs'
 import image_item from './blocks/image_item'
 import title_description_item from './blocks/title_description_item'
 import warranty_details from './blocks/warranty_details'
+import html_content from './blocks/html_content'
+import contact_us from './blocks/contact_us'
 
 export const schemaTypes = [
   //pages
@@ -45,5 +47,7 @@ export const schemaTypes = [
   faqs,
   image_item,
   title_description_item,
-  warranty_details
+  warranty_details,
+  html_content,
+  contact_us,
 ]
