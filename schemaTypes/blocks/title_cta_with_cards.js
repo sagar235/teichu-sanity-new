@@ -1,18 +1,11 @@
-import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
-
+import _ from 'lodash'
 const documentFields = ['page']
 
 export default defineType({
-  name: 'category_item',
-  title: 'Category Item',
+  name: 'title_cta_with_cards',
+  title: 'Title Cta With Cards',
   type: 'object',
-  groups: [
-    {
-      name: 'info',
-      title: 'Info',
-    },
-  ],
   fields: [
     defineField({
       name: 'title',
@@ -24,19 +17,9 @@ export default defineType({
         {name: 'it', title: 'Italian', type: 'string'},
       ],
     }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      group: 'info',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
+    {
       name: 'page_link',
       title: 'Page Link',
-      group: 'info',
       type: 'object',
       fields: [
         {
@@ -56,12 +39,22 @@ export default defineType({
           type: 'string',
         },
       ],
+    },
+    defineField({
+      name: 'items',
+      title: 'Items',
+      type: 'array',
+      of: [{type: 'category_item'}],
     }),
   ],
   preview: {
     select: {
-      title: 'title.en',
       media: 'image',
+    },
+    prepare() {
+      return {
+        title: 'Title Cta With Cards',
+      }
     },
   },
 })

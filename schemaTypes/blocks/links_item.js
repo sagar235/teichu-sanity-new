@@ -4,39 +4,13 @@ import {defineType, defineField} from 'sanity'
 const documentFields = ['page']
 
 export default defineType({
-  name: 'category_item',
-  title: 'Category Item',
+  name: 'links_item',
+  title: 'Links Item',
   type: 'object',
-  groups: [
-    {
-      name: 'info',
-      title: 'Info',
-    },
-  ],
   fields: [
-    defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'object',
-      fields: [
-        {name: 'en', title: 'English', type: 'string'},
-        {name: 'np', title: 'Nepali', type: 'string'},
-        {name: 'it', title: 'Italian', type: 'string'},
-      ],
-    }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      group: 'info',
-      options: {
-        hotspot: true,
-      },
-    }),
     defineField({
       name: 'page_link',
       title: 'Page Link',
-      group: 'info',
       type: 'object',
       fields: [
         {
@@ -58,10 +32,4 @@ export default defineType({
       ],
     }),
   ],
-  preview: {
-    select: {
-      title: 'title.en',
-      media: 'image',
-    },
-  },
 })

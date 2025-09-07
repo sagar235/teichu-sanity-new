@@ -1,11 +1,9 @@
-import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
-
-const documentFields = ['page']
+import _ from 'lodash'
 
 export default defineType({
-  name: 'category_item',
-  title: 'Category Item',
+  name: 'text_content_with_bg_image',
+  title: 'Text Content With Bg Image',
   type: 'object',
   groups: [
     {
@@ -25,8 +23,18 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
+      name: 'text',
+      title: 'Text',
+      type: 'object',
+      fields: [
+        {name: 'en', title: 'English', type: 'text'},
+        {name: 'np', title: 'Nepali', type: 'text'},
+        {name: 'it', title: 'Italian', type: 'text'},
+      ],
+    }),
+    defineField({
+      name: 'bg_image',
+      title: 'Bg Image',
       type: 'image',
       group: 'info',
       options: {
@@ -34,34 +42,21 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'page_link',
-      title: 'Page Link',
+      name: 'items',
+      title: 'Items',
       group: 'info',
-      type: 'object',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-        },
-        {
-          name: 'link',
-          type: 'reference',
-          title: 'Link',
-          to: _.map(documentFields, (field) => ({type: field})),
-        },
-        {
-          name: 'link_tag',
-          title: 'Link Tag (Anchor/Querystring)',
-          type: 'string',
-        },
-      ],
+      type: 'array',
+      of: [{type: 'paragraph_item'}],
     }),
   ],
   preview: {
     select: {
-      title: 'title.en',
       media: 'image',
+    },
+    prepare() {
+      return {
+        title: 'Text Content With Bg Image',
+      }
     },
   },
 })

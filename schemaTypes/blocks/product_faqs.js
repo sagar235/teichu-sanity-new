@@ -1,15 +1,9 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'shop_by_category',
-  title: 'Shop By Category',
+  name: 'product_faqs',
+  title: 'Product Faqs',
   type: 'object',
-  groups: [
-    {
-      name: 'info',
-      title: 'Info',
-    },
-  ],
   fields: [
     defineField({
       name: 'title',
@@ -21,23 +15,12 @@ export default defineType({
         {name: 'it', title: 'Italian', type: 'string'},
       ],
     }),
-    defineField({
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'object',
-      fields: [
-        {name: 'en', title: 'English', type: 'string'},
-        {name: 'np', title: 'Nepali', type: 'string'},
-        {name: 'it', title: 'Italian', type: 'string'},
-      ],
-    }),
-    defineField({
+    {
       name: 'items',
       title: 'Items',
-      group: 'info',
       type: 'array',
-      of: [{type: 'category_item'}],
-    }),
+      of: [{type: 'faqs_item'}],
+    },
   ],
   preview: {
     select: {
@@ -45,7 +28,7 @@ export default defineType({
     },
     prepare() {
       return {
-        title: 'Shop By Category',
+        title: 'Product Faqs',
       }
     },
   },
