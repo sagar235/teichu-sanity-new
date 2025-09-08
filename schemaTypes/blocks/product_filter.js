@@ -6,6 +6,16 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'object',
+      fields: [
+        {name: 'en', title: 'English', type: 'string'},
+        {name: 'np', title: 'Nepali', type: 'string'},
+        {name: 'it', title: 'Italian', type: 'string'},
+      ],
+    }),
+    defineField({
       name: 'links',
       title: 'Product Links',
       type: 'array',

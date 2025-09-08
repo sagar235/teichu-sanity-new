@@ -37,6 +37,14 @@ export default defineType({
       options: {hotspot: true},
     }),
     defineField({
+      name: 'year',
+      title: 'Year',
+      type: 'date',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+      },
+    }),
+    defineField({
       name: 'card_case',
       title: 'Card Case',
       type: 'string',

@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
 
-const documentFields = ['page']
+const documentFields = ['page', 'products']
 
 export default defineType({
   name: 'links_item',
@@ -32,4 +32,9 @@ export default defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      title: 'page_link.title'
+    },
+  },
 })

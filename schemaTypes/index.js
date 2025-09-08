@@ -1,6 +1,10 @@
 import products from './products'
 import page from './page'
 import blogs from './blogs'
+import gas_hob from './gas_hob'
+import chimney from './chimney'
+import oven from './oven'
+import air_fryer from './air_fryer'
 
 import hero_banner from './blocks/hero_banner'
 import shop_by_category from './blocks/shop_by_category'
@@ -27,6 +31,10 @@ export const schemaTypes = [
   //pages
   page,
   products,
+  gas_hob,
+  chimney,
+  oven,
+  air_fryer,
   blogs,
 
   //blocks

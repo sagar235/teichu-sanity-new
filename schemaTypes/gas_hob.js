@@ -3,8 +3,8 @@ import {defineType, defineField} from 'sanity'
 import block_types from './helpers/block_types'
 
 export default defineType({
-  name: 'page',
-  title: 'Pages',
+  name: 'gas_hob',
+  title: 'Gas Hob',
   type: 'document',
   fields: [
     defineField({
@@ -33,7 +33,7 @@ export default defineType({
         source: (doc) => doc.title?.en || '',
         slugify: (input) => {
           if (!input) return ''
-          return `/${_.kebabCase(input).slice(0, 200)}`
+          return `gas-hob/${_.kebabCase(input).slice(0, 200)}`
         },
       },
     }),
@@ -90,7 +90,7 @@ export default defineType({
   preview: {
     select: {
       title: 'title.en',
-      media: 'thumb_image',
+      media: 'featured_image',
     },
   },
 })
