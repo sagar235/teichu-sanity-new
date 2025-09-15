@@ -19,7 +19,7 @@ export default defineType({
       name: 'items',
       title: 'Items',
       type: 'array',
-      of: [{type: 'faqs_item'}],
+      of: [{type: 'product_faqs_item'}],
     },
   ],
   preview: {

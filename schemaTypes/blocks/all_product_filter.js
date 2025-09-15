@@ -15,6 +15,14 @@ export default defineType({
         {name: 'it', title: 'Italian', type: 'string'},
       ],
     }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
   ],
   preview: {
     select: {

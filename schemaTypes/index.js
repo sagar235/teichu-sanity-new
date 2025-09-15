@@ -20,6 +20,7 @@ import links_item from './blocks/links_item'
 import product_filter from './blocks/product_filter'
 import product_faqs from './blocks/product_faqs'
 import faqs_item from './blocks/faqs_item'
+import product_faqs_item from './blocks/product_faqs_item'
 import faqs from './blocks/faqs'
 import image_item from './blocks/image_item'
 import title_description_item from './blocks/title_description_item'
@@ -52,6 +53,7 @@ export const schemaTypes = [
   product_filter,
   product_faqs,
   faqs_item,
+  product_faqs_item,
   faqs,
   image_item,
   title_description_item,

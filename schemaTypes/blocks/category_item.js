@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
 
-const documentFields = ['page']
+const documentFields = ['page','products']
 
 export default defineType({
   name: 'category_item',
