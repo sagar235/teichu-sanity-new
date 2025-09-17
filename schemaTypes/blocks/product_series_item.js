@@ -1,8 +1,8 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'contact_us',
-  title: 'Contact Us',
+  name: 'product_series_item',
+  title: 'Product Series Item',
   type: 'object',
   fields: [
     defineField({
@@ -15,16 +15,12 @@ export default defineType({
         {name: 'it', title: 'Italian', type: 'string'},
       ],
     }),
-    defineField({
-      name: 'section_title',
-      title: 'Section Title',
-      type: 'object',
-      fields: [
-        {name: 'en', title: 'English', type: 'string'},
-        {name: 'np', title: 'Nepali', type: 'string'},
-        {name: 'it', title: 'Italian', type: 'string'},
-      ],
-    }),
+    {
+      name: 'product_model_item',
+      title: 'Product Model Item',
+      type: 'array',
+      of: [{type: 'product_model_item'}],
+    },
   ],
   preview: {
     select: {

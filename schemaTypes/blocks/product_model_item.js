@@ -1,16 +1,25 @@
 import _ from 'lodash'
 import {defineType, defineField} from 'sanity'
-
-const documentFields = ['page','products']
+const documentFields = ['products']
 
 export default defineType({
-  name: 'category_item',
-  title: 'Category Item',
+  name: 'product_model_item',
+  title: 'Product Model Item',
   type: 'object',
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
+      type: 'object',
+      fields: [
+        {name: 'en', title: 'English', type: 'string'},
+        {name: 'np', title: 'Nepali', type: 'string'},
+        {name: 'it', title: 'Italian', type: 'string'},
+      ],
+    }),
+    defineField({
+      name: 'product_type',
+      title: 'Product Type',
       type: 'object',
       fields: [
         {name: 'en', title: 'English', type: 'string'},
@@ -53,7 +62,6 @@ export default defineType({
   preview: {
     select: {
       title: 'title.en',
-      media: 'image',
     },
   },
 })

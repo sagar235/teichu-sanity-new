@@ -1,3 +1,4 @@
+import header from './header'
 import products from './products'
 import page from './page'
 import blogs from './blogs'
@@ -27,9 +28,14 @@ import title_description_item from './blocks/title_description_item'
 import warranty_details from './blocks/warranty_details'
 import html_content from './blocks/html_content'
 import contact_us from './blocks/contact_us'
+import navigation_items from './blocks/navigation_items'
+import product_name_item from './blocks/product_name_item'
+import product_series_item from './blocks/product_series_item'
+import product_model_item from './blocks/product_model_item'
 
 export const schemaTypes = [
   //pages
+  header,
   page,
   products,
   gas_hob,
@@ -60,4 +66,8 @@ export const schemaTypes = [
   warranty_details,
   html_content,
   contact_us,
+  navigation_items,
+  product_name_item,
+  product_series_item,
+  product_model_item,
 ]
